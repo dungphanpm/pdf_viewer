@@ -280,7 +280,8 @@ class _ZoomableWidgetState extends State<ZoomableWidget> {
               builder: (BuildContext context, BoxConstraints constraints) {
                 _containerSize =
                     Size(constraints.maxWidth, constraints.maxHeight);
-                return Center(
+                return Align(
+                  alignment: Alignment.topLeft,
                   child: Container(key: _key, child: widget.child),
                 );
               },
